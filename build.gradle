@@ -5,7 +5,7 @@ version '1.0-SNAPSHOT'
 buildscript {
     //存储一个属于gradle的变量，整个工程都能用，可通过gradle.ext.springBootVersion使用
     ext {
-        springBootVersion = '2.1.3.RELEASE'
+        springBootVersion = '2.1.4.RELEASE'
     }
     /*配置仓库地址，从而找到外部依赖
     按照你在文件中(build.gradle)仓库的顺序寻找所需依赖(如jar文件)，
@@ -45,4 +45,6 @@ dependencies {
     compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.0'
     compile 'mysql:mysql-connector-java'
     compile 'org.projectlombok:lombok'
+    compile("com.alibaba:fastjson:1.2.47")
+    compile group: 'com.github.pagehelper', name: 'pagehelper-spring-boot-starter', version: '1.2.4'
 }
